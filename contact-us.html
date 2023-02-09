@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <meta name="viewport" content="width=device-width; user-scalable=0;" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>Contact Us | Spice Caves Restaurant</title>
+    <script defer src="contact-us.js"></script>
+    <link rel="stylesheet" href="contact-us.css" />
+  </head>
+  <body>
+    <div id="preloader"><img src="assets/loader2.gif" alt="Loading" /></div>
+    <header class="head">
+      <nav class="navbar">
+        <div class="logos">
+          <img class="logo" src="assets/logo.png" alt="logo" />
+          <!-- <span class="logo-name">Restaurent.</span> -->
+        </div>
+        <ul class="nav-link">
+          <li class="nav-item">
+            <a href="index.html" class="nav-linkers">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-linkers">Gallery</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-linkers">Order Online</a>
+          </li> -->
+          <li class="nav-item">
+            <a href="about_us.html" class="nav-linkers">About us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-linkers contact-linker">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a href="food.html" class="nav-linkers">Exotic Recipes</a>
+          </li>
+          <!-- <li>
+            <button class="btn--login">Log in | Sign up</button>
+          </li> -->
+        </ul>
+         <div class="nav-mobile"><img src="assets/nav-burger.gif" alt=""></div>
+      </nav>
+      <div>
+        <video
+          src="assets/contact-us.mp4"
+          loop
+          muted
+          autoplay
+          class="contact-us--video"
+        ></video>
+      </div>
+      <div class="texts">
+        <div class="banner--text1">
+          <h3 class="welcome--text"><span class="src"> Contact </span>us...</h3>
+
+          <h1 class="restaurent--name">Spice &nbsp Caves</h1>
+          <button class="btn--back-to-home">
+            <a href="index.html" class="back-to-home"> Back To Home</a>
+          </button>
+        </div>
+      </div>
+    </header>
+    <button class="back-to-top--btn" data-visible="false">
+      <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+      <lord-icon
+      class="back--gif"
+        src="https://cdn.lordicon.com/eflfmgmj.json"
+        trigger="loop"
+        delay="1000"
+        colors="primary:#000000"
+        style="width: 70px; height: 70px"
+      >
+      </lord-icon>
+    </button>
+    <section class="overlayed hdn"></section>
+    <section class="forms-section">
+      <button class="closes hdn">&times;</button>
+      <!-- <h1 class="section-title">Animated Forms</h1> -->
+      <div class="forms hdn">
+        <div class="form-wrapper is-active">
+          <button type="button" class="switcher switcher-login ch-fn-2">
+            Login
+            <span class="underline"></span>
+          </button>
+          <form class="form form-login">
+            <fieldset>
+              <legend>Please, enter your email and password for login.</legend>
+              <div class="input-block">
+                <label for="login-email" class="ch-fn">E-mail</label>
+                <input id="login-email" type="email" required />
+              </div>
+              <div class="input-block">
+                <label for="login-password" class="ch-fn">Password</label>
+                <input id="login-password" type="password" required />
+              </div>
+            </fieldset>
+            <button type="submit" class="btn-login ch-fn-2">Login</button>
+          </form>
+        </div>
+        <div class="form-wrapper">
+          <button type="button" class="switcher switcher-signup ch-fn-2">
+            Sign Up
+            <span class="underline"></span>
+          </button>
+          <form class="form form-signup" id="sign-form">
+            <fieldset>
+              <legend>
+                Please, enter your email, password and password confirmation for
+                sign up.
+              </legend>
+              <div class="input-block">
+                <label for="signup-email" class="ch-fn">E-mail</label>
+                <input id="signup-email" type="email" required />
+                <label for="signup-email" class="ch-fn">Phone Number</label>
+                <input id="signup-email" type="number" required />
+                <label for="signup-email" class="ch-fn">Address</label>
+                <input id="signup-email" type="text" required />
+              </div>
+              <div class="input-block">
+                <label for="signup-password" class="ch-fn">Password</label>
+                <input id="signup-password" type="password" required />
+              </div>
+              <!-- <div class="input-block">
+                <label for="signup-password-confirm">Confirm password</label>
+                <input id="signup-password-confirm" type="password" required />
+              </div> -->
+            </fieldset>
+            <button type="submit" class="btn-signup ch-fn-2">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section--0">
+      <div class="img1" data-aos="zoom-in-right">
+        <img src="assets/email-us-1.jpg" alt="" class="email-us--image-1" />
+        <h1 class="maintxt">For <span class="src"> Bookings...</span></h1>
+      </div>
+      <div class="img2" data-aos="zoom-in-left">
+        <h1 class="maintxt">For <span class="src"> Dine in...</span></h1>
+        <img src="assets/email-us-3.jpg" alt="" class="email-us--image-2" />
+      </div>
+      <div class="img3" data-aos="zoom-in-right">
+        <img src="assets/email-us-2.jpg" alt="" class="email-us--image-3" />
+        <h1 class="maintxt">
+          <span class="src">&</span> For <span class="src">Delivery...</span>
+        </h1>
+      </div>
+      <div class="number">
+        <img
+          src="assets/contact-us--image.jpg"
+          alt=""
+          class="contact-us--image"
+          data-aos="fade-up"
+        />
+        <h2 data-aos="fade-up" data-aos-delay="300">Call us at...</h2>
+        <h1 class="maintxt" data-aos="fade-up" data-aos-delay="500">
+          +1800 - 420 - 6969
+        </h1>
+      </div>
+    </section>
+
+    <section class="section--1">
+      <img
+        src="assets/faq-image.jpg"
+        alt=""
+        class="faq-image"
+        data-aos="zoom-in-up"
+        data-aos-delay="250"
+      />
+      <h1 class="maintxt" data-aos="zoom-in-up" data-aos-delay="400">
+        FAQ <span class="src">s...</span>
+      </h1>
+      <h2 class="src" data-aos="zoom-in-up" data-aos-delay="250">
+        (frequently asked questions)
+      </h2>
+      <div class="faq-div1" data-aos="zoom-in-right">
+        <img src="assets/faq1.jpg" alt="" class="faq-img1" />
+        <div class="faq-innerdiv1">
+          <h1 class="maintxt lefty">
+            ※ How do I contact
+            <span class="src"> Spice Caves Restaurant ?</span>
+          </h1>
+
+          <h2 class="maintxt lefty">
+            ⫸ <span class="src"> Spice Caves'</span> number is
+            1800-420-6969 .
+          </h2>
+        </div>
+      </div>
+      <div class="faq-div1" data-aos="zoom-in-left">
+        <!-- <img src="assets/faq2.jpg" alt="" class="faq-img1 hide" /> -->
+        <div class="faq-innerdiv1">
+          <h1 class="maintxt righty">
+            ※ Is
+            <span class="src"> Spice Caves' </span>number toll-free?
+          </h1>
+          <h2 class="maintxt righty">
+            ⫸ Yes,<span class="src"> Spice Caves' </span>
+            number is toll-free.
+          </h2>
+        </div>
+        <img src="assets/faq2.jpg" alt="" class="faq-img1 hide2" />
+      </div>
+
+      <div class="faq-div1" data-aos="zoom-in-right">
+        <img src="assets/faq3.jpg" alt="" class="faq-img1" />
+        <div class="faq-innerdiv1">
+          <h1 class="maintxt lefty">
+            ※ In which language do I talk to
+            <span class="src"> Spice Caves' </span>customer care?
+          </h1>
+          <h2 class="maintxt lefty">
+            ⫸ In any language, as per your convinence.
+          </h2>
+        </div>
+      </div>
+      <div class="faq-div1" data-aos="zoom-in-left" data-aos="zoom-in-right">
+        <!-- <img src="assets/faq4.jpg" alt="" class="faq-img1 hide" /> -->
+        <div class="faq-innerdiv1">
+          <h1 class="maintxt righty">
+            ※ At what time can i talk to
+            <span class="src"> Spice Caves' </span> customer service?
+          </h1>
+          <h2 class="maintxt righty">
+            ⫸ Any time between ( 10 A.M. to 8 P.M.).
+          </h2>
+        </div>
+        <img src="assets/faq4.jpg" alt="" class="faq-img1 hide2" />
+      </div>
+    </section>
+   <section class="section--footer-1">
+      <div>
+        <div class="footer-div"  data-aos="fade-up">
+          <div class="next--links">
+            <h1 class="footer-txt-1">Site Links</h1>
+            <h2 class="footer-txt-2 lenk">
+              <a href="index.html"> Home</a>
+            </h2>
+            <h2 class="footer-txt-2 lenk">
+              <a href="gallery.html">Gallery</a>
+            </h2>
+            <h2 class="footer-txt-2 lenk">
+              <a href="about_us.html">About us</a>
+            </h2>
+            <h2 class="footer-txt-2 lenk">
+              <a href="contact-us.html">Contact us</a>
+            </h2>
+          </div>
+          <div class="logo-name-div"  data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/logo.png" alt="" class="res-logo" />
+            <h1 class="footer-txt-3">Spice &nbsp Caves</h1>
+          </div>
+        </div>
+        <h1 class="footer-txt-line" data-aos="fade-up"data-aos-delay="400">
+          _ <span class="src"> _ </span>_ <span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span> _<span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span> _<span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span> _<span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span> _<span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span>
+        </h1>
+        <h1 class="footer-txt-line-2"  data-aos="fade-up"data-aos-delay="800">Our Partners...</h1>
+     <div data-aos="fade-up" data-aos-delay="1000">
+
+     <div class="companies-1">
+       <img src="assets/footer-15.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-14.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-5.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-9.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-7.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-13.png" alt="" class="res-logo-2" />
+        </div>
+        <div class="companies-1">
+          <img src="assets/footer-12.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-10.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-8.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-6.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-11.png" alt="" class="res-logo-2" />
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="section--footer-2">
+      <div class="footer-2-div">
+        <div class="footer-2-div--2">
+          <h1>Social media links...</h1>
+          <div>           
+            <a href="https://www.instagram.com/">
+              <img src="assets/instagram.png" alt="" class="res-logo-3"
+              /></a>
+              <a href="https://www.facebook.com/">
+                <img src="assets/facebook.png" alt="" class="res-logo-3"
+                /></a>
+                <a href="https://www.twitter.com/">
+                  <img src="assets/twitter.png" alt="" class="res-logo-3"
+                  /></a>
+                </div>
+              </div>
+              <h4>|</h4>
+        <div class="abcd">
+          <h1>Opening - closing hours...</h1>
+          <h2>⫸ 17 : 00 - 00 : 00 <span class="src2"> ( M / W / F)</span></h2>
+          <h2>⫸ 18 : 00 - 23 : 00 <span class="src2"> ( T / T / S )</span></h2>
+        </div>
+        <div class="abcd2">
+          <h1>Our Address...</h1>
+          <h2>1st Floor, 4/293, Gomti Nagar, Lucknow, Uttar Pradesh</h2>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: "600",
+        delay: "300",
+        once: "true",
+      });
+    </script>
+  </body>
+</html>
