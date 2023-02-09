@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>About Us | Spice Caves Restaurant</title>
+    <script defer src="about_us.js"></script>
+    <link rel="stylesheet" href="about_us.css" />
+  </head>
+  <body>
+    <div id="preloader"><img src="assets/loader2.gif" alt="Loading" /></div>
+    <header class="head">
+      <nav class="navbar">
+        <div class="logos">
+          <img class="logo" src="assets/logo.png" alt="logo" />
+          <!-- <span class="logo-name">Restaurent.</span> -->
+        </div>
+        <ul class="nav-link">
+          <li class="nav-item">
+            <a href="index.html" class="nav-linkers">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-linkers">Gallery</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-linkers">Order Online</a>
+          </li> -->
+          <li class="nav-item">
+            <a href="#" class="nav-linkers about-linker">About us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-linkers">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a href="food.html" class="nav-linkers">Exotic Recipes</a>
+          </li>
+          <!-- <li>
+            <button class="btn--login">Log in | Sign up</button>
+          </li> -->
+        </ul>
+         <div class="nav-mobile"><img src="assets/nav-burger.gif" alt=""></div>
+      </nav>
+      <div>
+        <video
+          src="assets/pexels-kampus-production-8626672.mp4"
+          loop
+          muted
+          autoplay
+          class="about-us--video"
+        ></video>
+      </div>
+      <div class="texts">
+        <div class="banner--text1">
+          <h3 class="welcome--text"><span class="src"> About </span>us...</h3>
+
+          <h1 class="restaurent--name">Spice &nbsp Caves</h1>
+          <button class="btn--back-to-home">
+            <a href="index.html" class="back-to-home"> Back To Home</a>
+          </button>
+        </div>
+      </div>
+    </header>
+    <button class="back-to-top--btn" data-visible="false">
+      <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+      <lord-icon
+      class="back--gif"
+        src="https://cdn.lordicon.com/eflfmgmj.json"
+        trigger="loop"
+        delay="1000"
+        colors="primary:#000000"
+        style="width: 70px; height: 70px"
+      >
+      </lord-icon>
+    </button>
+    <section class="overlayed hdn"></section>
+    <section class="forms-section">
+      <button class="closes hdn">&times;</button>
+      <!-- <h1 class="section-title">Animated Forms</h1> -->
+      <div class="forms hdn">
+        <div class="form-wrapper is-active">
+          <button type="button" class="switcher switcher-login ch-fn-2">
+            Login
+            <span class="underline"></span>
+          </button>
+          <form class="form form-login" id="sign-form">
+            <fieldset>
+              <legend>Please, enter your email and password for login.</legend>
+              <div class="input-block">
+                <label for="login-email" class="ch-fn">E-mail</label>
+                <input id="login-email" type="email" required />
+              </div>
+              <div class="input-block">
+                <label for="login-password" class="ch-fn">Password</label>
+                <input id="login-password" type="password" required />
+              </div>
+            </fieldset>
+            <button type="submit" class="btn-login ch-fn-2">Login</button>
+          </form>
+        </div>
+        <div class="form-wrapper">
+          <button type="button" class="switcher switcher-signup ch-fn-2">
+            Sign Up
+            <span class="underline"></span>
+          </button>
+          <form class="form form-signup">
+            <fieldset>
+              <legend>
+                Please, enter your email, password and password confirmation for
+                sign up.
+              </legend>
+              <div class="input-block">
+                <label for="signup-email" class="ch-fn">E-mail</label>
+                <input id="signup-email" type="email" required />
+                <label for="signup-email" class="ch-fn">Phone Number</label>
+                <input id="signup-email" type="number" required />
+                <label for="signup-email" class="ch-fn">Address</label>
+                <input id="signup-email" type="text" required />
+              </div>
+              <div class="input-block">
+                <label for="signup-password" class="ch-fn">Password</label>
+                <input id="signup-password" type="password" required />
+              </div>
+              <!-- <div class="input-block">
+                <label for="signup-password-confirm">Confirm password</label>
+                <input id="signup-password-confirm" type="password" required />
+              </div> -->
+            </fieldset>
+            <button type="submit" class="btn-signup ch-fn-2">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="section--0">
+      <div class="about-texts">
+        <!-- <h2>About us</h2> -->
+        <h1 data-aos="zoom-in-up">Spice &nbsp Caves</h1>
+        <h3 data-aos="zoom-in-up">
+       Serving since 1990 with love.
+Spice Caves' opened on Thanksgiving Day 1990. Chef / Owner Milind Palaria began
+baking pies and selling them to restaurants and his neighbors out of a
+small kitchen at the corner of Hudson and North Moore St. in Lucknow.
+U.P.'s beloved restaurant and pie shop celebrates 33 years of
+classic, made from scratch American cooking.
+        </h3>
+      </div>
+      <div class="main-div" data-aos="fade-up">
+        <div class="inner-div">
+          <div class="smaller-div1">
+            <img
+              src="assets/pexels-maisy-vi-11213692.jpg"
+              alt=""
+              class="img1 imgs"
+            />
+            <img
+              src="assets/pexels-maria-bortolotto-6240974.jpg"
+              alt=""
+              class="img2 imgs"
+            />
+          </div>
+          <div class="smaller-div2">
+            <img
+              src="assets/pexels-anna-belousova-10132214.jpg"
+              alt=""
+              class="img3 imgs"
+            />
+            <img
+              src="assets/pexels-eba-marie-8850948.jpg"
+              alt=""
+              class="img4 imgs"
+            />
+          </div>
+        </div>
+        <div class="bigger-div" data-aos="zoom-in-left">
+          <img
+            src="assets/pexels-zhang-kaiyv-3603453.jpg"
+            alt=""
+            class="bigimg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section--1">
+      <!-- <h2>Meet...</h2> -->
+      <h1 data-aos="zoom-in-down">
+        Our <span class="src"> Senior Chefs...</span>
+      </h1>
+      <div class="chef0" data-aos="zoom-in-right">
+        <img src="assets/pablo chocobar.jpg" alt="" />
+        <div class="about--chef0">
+          <h1>Pablo Chocobar</h1>
+          <h2>Head Chef, <span class="src"> Mexican Cuisine</span></h2>
+          <h3>
+            Born in Mexico, former cartel chef and main lead of
+            <span class="src"> Netflix's original, NACHOS.</span>
+          </h3>
+        </div>
+      </div>
+      <div class="chef1" data-aos="zoom-in-left">
+        <img src="assets/prashant coomer.jpg" alt="" class="img--hide" />
+        <div class="about--chef1">
+          <h1>Prashant Coomer</h1>
+          <h2>Head Chef , <span class="src"> Indian Cuisine</span></h2>
+          <h3>
+            Born and brought up in the holy land of
+            <span class="src"> Varanasi, India</span> and hence, specializes in
+            Indian Cuisine.
+          </h3>
+        </div>
+        <img src="assets/prashant coomer.jpg" alt="" class="img--hide-2" />
+      </div>
+
+      <div class="chef2" data-aos="zoom-in-right">
+        <img src="assets/chin choo lee.jpg" alt="" />
+        <div class="about--chef2">
+          <h1>Chin Choo Lee Lui</h1>
+          <h2>Executive Chef, <span class="src"> Chinese Cuisine</span></h2>
+          <h3>
+            He is originally <span class="src"> from Nepal</span>, but pretends
+            to be chinese to increase his <span class="src"> momos sale.</span>
+          </h3>
+        </div>
+      </div>
+      <div class="chef3" data-aos="zoom-in-left">
+        <img src="assets/ben dover.jpg" alt="" class="img--hide" />
+        <div class="about--chef3">
+          <h1>Ben Dover</h1>
+          <h2>Asst. Chef, <span class="src">Italian Cuisine</span></h2>
+          <h3>
+            Can make any italian food ordered to him and is very humble guy
+            until you add <span class="src"> tomato sauce in the Pizza.</span>
+          </h3>
+        </div>
+        <img src="assets/ben dover.jpg" alt="" class="img--hide-2" />
+      </div>
+    </section>
+    <section class="section--2">
+      <h1 data-aos="zoom-in-up">Our <span class="src"> Location...</span></h1>
+      <div class="map" data-aos="zoom-in-up">
+        <iframe
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5777338225694!2d80.99668611504369!3d26.853379883153146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2c65499ebcb%3A0x2f128475c2ad3a1c!2sSpice%20Caves!5e0!3m2!1sen!2sin!4v1671288277558!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="maps"
+        ></iframe>
+      </div>
+    </section>
+    <section class="section--3">
+      <h1 data-aos="zoom-in-up"><span class="src"> Opening </span>&...</h1>
+      <h1 data-aos="zoom-in-up">Closing<span class="src"> hours. </span></h1>
+      <div class="och">
+        <div class="inneroch" data-aos="zoom-in-right">
+          <h1>Monday :</h1>
+          <h2>17 : 00 — 23 : 30</h2>
+        </div>
+        <div class="inneroch" data-aos="zoom-in-left">
+          <h1>Tuesday :</h1>
+          <h2>{ <span class="src"> Closed </span>}</h2>
+        </div>
+        <div class="inneroch" data-aos="zoom-in-right">
+          <h1>Wednesday :</h1>
+          <h2>17 : 00 — 23 : 30</h2>
+        </div>
+        <div class="inneroch" data-aos="zoom-in-left">
+          <h1>Thursday :</h1>
+          <h2>{ <span class="src"> Closed </span>}</h2>
+        </div>
+        <div class="inneroch" data-aos="zoom-in-right">
+          <h1>Friday :</h1>
+          <h2>16 : 30 — 00 : 30</h2>
+        </div>
+        <div class="inneroch" data-aos="zoom-in-left">
+          <h1>Saturday :</h1>
+          <h2>16 : 30 — 01 : 30</h2>
+        </div>
+        <div class="inneroch" data-aos="zoom-in-right">
+          <h1>Sunday :</h1>
+          <h2>16 : 00 — 01 : 30</h2>
+        </div>
+        <h1 data-aos="zoom-in-up">
+          (for more information, call us at :
+          <span class="numero"> +1800-420-6969 </span> )
+        </h1>
+      </div>
+    </section>
+   <section class="section--footer-1">
+      <div>
+        <div class="footer-div"  data-aos="fade-up">
+          <div class="next--links">
+            <h1 class="footer-txt-1">Site Links</h1>
+            <h2 class="footer-txt-2 lenk">
+              <a href="index.html"> Home</a>
+            </h2>
+            <h2 class="footer-txt-2 lenk">
+              <a href="gallery.html">Gallery</a>
+            </h2>
+            <h2 class="footer-txt-2 lenk">
+              <a href="about_us.html">About us</a>
+            </h2>
+            <h2 class="footer-txt-2 lenk">
+              <a href="contact-us.html">Contact us</a>
+            </h2>
+          </div>
+          <div class="logo-name-div"  data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/logo.png" alt="" class="res-logo" />
+            <h1 class="footer-txt-3">Spice &nbsp Caves</h1>
+          </div>
+        </div>
+        <h1 class="footer-txt-line" data-aos="fade-up"data-aos-delay="400">
+          _ <span class="src"> _ </span>_ <span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span> _<span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span> _<span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span> _<span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span> _<span class="src"> _ </span> _<span
+            class="src"
+          >
+            _
+          </span>
+          _<span class="src"> _ </span>
+        </h1>
+        <h1 class="footer-txt-line-2"  data-aos="fade-up"data-aos-delay="800">Our Partners...</h1>
+     <div data-aos="fade-up" data-aos-delay="1000">
+
+     <div class="companies-1">
+       <img src="assets/footer-15.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-14.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-5.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-9.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-7.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-13.png" alt="" class="res-logo-2" />
+        </div>
+        <div class="companies-1">
+          <img src="assets/footer-12.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-10.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-8.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-6.png" alt="" class="res-logo-2" />
+          <img src="assets/footer-11.png" alt="" class="res-logo-2" />
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="section--footer-2">
+      <div class="footer-2-div">
+        <div class="footer-2-div--2">
+          <h1>Social media links...</h1>
+          <div>           
+            <a href="https://www.instagram.com/">
+              <img src="assets/instagram.png" alt="" class="res-logo-3"
+              /></a>
+              <a href="https://www.facebook.com/">
+                <img src="assets/facebook.png" alt="" class="res-logo-3"
+                /></a>
+                <a href="https://www.twitter.com/">
+                  <img src="assets/twitter.png" alt="" class="res-logo-3"
+                  /></a>
+                </div>
+              </div>
+              <h4>|</h4>
+        <div class="abcd">
+          <h1>Opening - closing hours...</h1>
+          <h2>⫸ 17 : 00 - 00 : 00 <span class="src2"> ( M / W / F)</span></h2>
+          <h2>⫸ 18 : 00 - 23 : 00 <span class="src2"> ( T / T / S )</span></h2>
+        </div>
+        <div class="abcd2">
+          <h1>Our Address...</h1>
+          <h2>1st Floor, 4/293, Gomti Nagar, Lucknow, Uttar Pradesh</h2>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: "600",
+        delay: "300",
+        once: "true",
+      });
+    </script>
+  </body>
+</html>
