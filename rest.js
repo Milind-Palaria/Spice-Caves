@@ -322,7 +322,8 @@ const okayNotRegisternBtn = document.querySelector(".register-not-okay");
 const inlogs = document.querySelector(".inlogs");
 const avatarName = document.getElementById("avatar-name");
 const avatarAddy = document.getElementById("avatar-addy");
-var loggedIn = false;
+var loggedIn=false;
+var loggedIn = true;
 
 
 /////////////////////////////////////////////////////////////////

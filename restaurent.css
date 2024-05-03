@@ -2904,6 +2904,9 @@ display: block;}
   /* margin-top: 35%; */
   /* margin-right: 20%; */
   background: none;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
   border: none;
   background: rgba(0, 0, 0, 0.701);
   backdrop-filter: blur(7px);
