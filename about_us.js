@@ -26,3 +26,33 @@ window.addEventListener("scroll", () => {
 backToTopBtn.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" })
 );
+
+
+
+
+//////////////////////////////////////////////////////
+// HAMBURGER FUNCTIONALITY
+
+const hamImg = document.getElementById("ham--img");
+const navOverlay = document.getElementById("nav--overlays");
+const closeNav = document.getElementById("nav--closer");
+
+
+hamImg.addEventListener('click', () => {
+  console.log('hello');
+  // navOverlay.setAttribute("data-visible", true);
+  
+  navOverlay.classList.remove("hdn");
+  closeNav.classList.remove("hdn");
+
+});
+
+const navCloseModal =  () => {
+  // closeNav.setAttribute("data-visible", false);
+  // navOverlay.setAttribute("data-visible", false);
+  closeNav.classList.add("hdn");
+  navOverlay.classList.add("hdn");
+
+};
+
+  closeNav.addEventListener('click',navCloseModal);
