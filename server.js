@@ -11,7 +11,7 @@ const JWT_SECRET =
 
 mongoose
   .connect(
-    "mongodb+srv://milind:milind47@cluster0.0auwsv2.mongodb.net/spicedb?retryWrites=true&w=majority",
+    "mongodb+srv://Milind-Palaria:milind47%40iiitl@spice-caves-cluster.sjgydgj.mongodb.net/?retryWrites=true&w=majority&appName=Spice-Caves-Cluster",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
