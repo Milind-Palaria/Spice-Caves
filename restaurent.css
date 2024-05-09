@@ -9,6 +9,7 @@ body {
   font-family: "Poppins", sans-serif;
   width: 100%;
   overflow-x: hidden;
+  /* transform: scale(1) !important; */
 }
 
 .prevent-select {
@@ -2290,8 +2291,8 @@ visibility: hidden;
 
 .lord-icons-4 {
   /* transform: translateY(-0.2rem); */
-  padding-right: 0.5rem;
-  padding-bottom: 0.6rem;
+  padding-right: 1.5rem;
+  /* padding-bottom: 0.6rem; */
 }
 
 .cart-btn {
@@ -2969,13 +2970,16 @@ visibility: hidden;
 }
 
 .cart--section--extended>h1 {
-  padding-top: 2rem;
+  padding-top: 1rem;
   font-size: 5rem;
   font-family: "Dancing Script", cursive;
+  border-bottom: 5px solid black;
+  /* border-style:dashed; */
+  border-bottom-style: dashed;
 }
 
 .cart--section--extended>div {
-  transform: translateX(-15%);
+  transform: translate(-15%,-2%);
   display: flex;
   /* align-items: center; */
   /* justify-content: space-around; */
@@ -2991,7 +2995,7 @@ visibility: hidden;
 }
 
 .extended--div>h1 {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 
 .inner--extended--div {
@@ -3032,7 +3036,7 @@ visibility: hidden;
 }
 
 .extended--div-2>h1 {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 
 .inr--extended--div-2 {
@@ -3080,7 +3084,7 @@ visibility: hidden;
 }
 
 .payment--btn {
-  height: 3rem;
+  height: 2.5rem;
   /* bottom: 0; */
   /* margin-top: 35%; */
   /* margin-right: 20%; */
@@ -3096,9 +3100,9 @@ visibility: hidden;
 
   border-radius: 2rem;
   font-family: "Dancing Script", cursive;
-  padding: 1.1rem 2.7rem 3.2rem 2.7rem;
+  padding: 0.8rem 2.2rem 3.2rem 2rem;
   font-size: 2rem;
-  transform: translate(24rem, -33rem);
+  transform: translate(21.75rem, -33rem);
   cursor: pointer;
 
   -moz-box-shadow: 10px 10px 5px rgba(10, 10, 10, 0.356);
@@ -3271,8 +3275,14 @@ visibility: hidden;
   -webkit-box-shadow: 7px 10px 7px rgba(10, 10, 10, 0.498);
   box-shadow: 6px 7px 10px rgba(10, 10, 10, 0.498);
 }
+.deliver--text>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
-.deliver--text>h1 {
+.deliver--text>div>div>h1 {
   display: inline;
   font-size: 2.8rem;
   font-family: "Dancing Script", cursive;
@@ -3282,17 +3292,17 @@ visibility: hidden;
   /* padding-top: 4rem; */
   padding-left: 0.4rem;
 
-  /* transform: translateY(-5rem) !important; */
-
+  /* transform: translateY(-15rem) !important; */
+margin-top: -5rem !important;
 
   text-align: center;
   text-shadow: 2px 2px 8px rgba(10, 10, 10, 0.498);
 }
 
-.deliver--text>h2 {
+.deliver--text>div>div>h2 {
   font-size: 1.6rem;
   font-family: "Dancing Script", cursive;
-  transform: translate(7rem, -3rem);
+  /* transform: translate(7rem, -3rem); */
 
   color: #d1815e;
 
@@ -3303,10 +3313,10 @@ visibility: hidden;
   text-shadow: 2px 2px 8px rgba(10, 10, 10, 0.498);
 }
 
-.deliver--text>h3 {
+.deliver--text>div>div>h3 {
   font-size: 1.6rem;
   font-family: "Dancing Script", cursive;
-  transform: translate(11rem, -3rem);
+  /* transform: translate(11rem, -3rem); */
 
   color: #e29c7e;
 
@@ -3316,7 +3326,11 @@ visibility: hidden;
   text-align: center;
   text-shadow: 2px 2px 8px rgba(10, 10, 10, 0.498);
 }
+#avatar-addy{
+  text-decoration: underline !important;
+  color: #d07a55 !important;
 
+}
 .deliver--text>button {
   display: block;
   margin-left: auto;
@@ -4455,20 +4469,20 @@ visibility: hidden;
     margin-top: 2rem;
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 2.2rem;
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 1.2rem;
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 1.2rem;
   }
 
-  .deliver--text>button {
+  .deliver--text>div>button {
     margin-top: 0.2rem;
     font-size: 1.3rem;
 
@@ -4726,10 +4740,12 @@ visibility: hidden;
   }
 
   .payment--btn {
+    height: 1.5rem;
     font-size: 1.3rem;
-    padding: 0.7rem 2rem 2.8rem 2rem;
-    transform: translate(13.8rem, -29rem);
+    padding: 0.7rem 1.5rem 2.3rem 1.5rem;
 
+    transform: translate(13.8rem, -29rem);
+gap: 10px;
   }
 
   .cart--section {
@@ -4777,6 +4793,11 @@ visibility: hidden;
 
   .lord-icons-3 {
     width: 40px !important;
+  }
+  .lord-icons-4 {
+    width: 20px !important;
+    /* padding-right: 1rem !important; */
+    margin-top: -0.5rem;
   }
 
   .cart-div {
@@ -4899,12 +4920,12 @@ visibility: hidden;
     transform: translate(-40px, 15px);
   }
 
-  .payment--btn {
+  /* .payment--btn {
     font-size: 1.3rem;
     padding: 0.7rem 2rem 2.8rem 2rem;
     transform: translate(13.5rem, -29rem);
 
-  }
+  } */
 }
 
 @media only screen and (max-width: 830px) {
@@ -5020,7 +5041,7 @@ visibility: hidden;
 
   .extended--div {
     padding-right: 0;
-    transform: translateX(-7rem);
+    transform: translateX(-5rem) !important;
   }
 
   .back-to-top--btn {
@@ -5196,26 +5217,26 @@ visibility: hidden;
 }
 
 @media only screen and (max-width: 745px) {
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 2.2rem;
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 1.2rem;
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 1.2rem;
   }
 
-  .deliver--text>button {
+  .deliver--text>div>button {
     margin-top: 0.2rem;
     font-size: 1.3rem;
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 120px !important;
     height: 120px !important;
   }
@@ -5328,17 +5349,17 @@ visibility: hidden;
   }
 
   .payment--btn {
-    font-size: 1.1rem;
-    padding: 0.6rem 1.6rem 2.2rem 1.6rem;
+    /* font-size: 1.1rem;
+    padding: 0.6rem 1.6rem 2.2rem 1.6rem; */
     transform: translate(12.7rem, -29rem);
   }
 
-  .lord-icons-4 {
+  /* .lord-icons-4 {
     width: 27px !important;
     height: 27px !important;
     padding-right: 8px !important;
     padding-bottom: 4px !important;
-  }
+  } */
 
   .texts {
     padding-top: 1.5em;
@@ -5509,26 +5530,26 @@ visibility: hidden;
     padding: 2rem 3rem;
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 2.1rem;
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 1.2rem;
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 1.2rem;
   }
 
-  .deliver--text>button {
+  .deliver--text>div>button {
     margin-top: 0.2rem;
     font-size: 1.3rem;
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 120px !important;
     height: 120px !important;
   }
@@ -5627,6 +5648,9 @@ visibility: hidden;
     font-size: 0.8rem;
     /* padding-top: 15px; */
     /* transform: translateY(10px) !important; */
+  }
+  .extended--div{
+    transform: translateX(-3rem) !important;
   }
 
   .extended--div>h1 {
@@ -5959,30 +5983,30 @@ visibility: hidden;
     padding: 2rem 3rem;
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
-    font-size: 2rem;
+    font-size: 1.8rem;
     /* padding-bottom: 30px !important; */
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 1.1rem;
-    transform: translate(5rem, -2rem);
+    /* transform: translate(5rem, -2rem); */
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 1.1rem;
-    transform: translate(8rem, -2.4rem);
+    /* transform: translate(8rem, -2.4rem); */
   }
 
   .deliver--text>button {
-    margin-top: 0.2rem;
-    font-size: 1.15rem;
-    transform: translateY(-15px);
+    margin-top: 1rem;
+    font-size: 1rem;
+    /* transform: translateY(-15px); */
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 100px !important;
     height: 100px !important;
   }
@@ -6028,7 +6052,7 @@ visibility: hidden;
   }
 
   .extended--div {
-    transform: translateX(-5.5rem) !important;
+    transform: translateX(-3.7rem) !important;
   }
 
   .extended--div-2 {
@@ -6273,16 +6297,21 @@ visibility: hidden;
 
 
   .payment--btn {
-    font-size: 0.8rem;
-    padding: 0.6rem 1.2rem 0.5rem 1.2rem;
+     font-size: 0.8rem;
+   /* padding: 0.6rem 1.2rem 0.5rem 1.2rem; */
     transform: translate(8.76rem, -23rem);
+    padding-bottom: 1.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 5px;
   }
 
   .lord-icons-4 {
-    width: 22px !important;
-    height: 22px !important;
-    padding-right: 6px !important;
-    padding-bottom: 4px !important;
+    width: 15px !important;
+    height: 15px !important;
+    /* padding-right: 6px !important;
+    padding-bottom: 4px !important; */
+    margin-top: 0;
   }
 
   .inr--extended--div-2 {
@@ -6320,7 +6349,7 @@ visibility: hidden;
   }
 
   .extended--div {
-    transform: translateX(-4rem) !important;
+    transform: translateX(-2.3rem) !important;
   }
 
   .inner--extended--div-2 {
@@ -6442,30 +6471,30 @@ visibility: hidden;
     padding: 1.7rem 2.7rem;
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 1.8rem;
     /* padding-bottom: 30px !important; */
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 1rem;
-    transform: translate(3rem, -1.8rem);
+    /* transform: translate(3rem, -1.8rem); */
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 1rem;
-    transform: translate(5rem, -2.2rem);
+    /* transform: translate(5rem, -2.2rem); */
   }
 
   .deliver--text>button {
-    margin-top: 0.2rem;
+    margin-top: 1.2rem;
     font-size: 1.05rem;
-    transform: translateY(-15px);
+    /* transform: translateY(-15px); */
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 80px !important;
     height: 80px !important;
   }
@@ -7396,32 +7425,33 @@ visibility: hidden;
 
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 1.5rem;
     /* padding-bottom: 30px !important; */
   }
 
-  .deliver--text>h2 {
-    font-size: 0.7rem;
-    transform: translate(3rem, -1.8rem);
+  .deliver--text>div>div>h2 {
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    /* transform: translate(3rem, -1.8rem); */
   }
 
-  .deliver--text>h3 {
-    font-size: 0.7rem;
-    transform: translate(5rem, -2.2rem);
+  .deliver--text>div>div>h3 {
+    font-size: 0.8rem;
+    /* transform: translate(5rem, -2.2rem); */
   }
 
   .deliver--text>button {
-    margin-top: 0.2rem;
+    margin-top: 1.2rem;
     font-size: 0.9rem;
     padding: 0.6rem 2rem 0.6rem 2rem;
 
-    transform: translateY(-13px);
+    /* transform: translateY(-13px); */
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 80px !important;
     height: 80px !important;
   }
@@ -7533,11 +7563,11 @@ visibility: hidden;
     transform: translate(8rem, -25rem);
   }
 
-  .payment--btn {
-    font-size: 0.8rem;
-    padding: 0.6rem 1.2rem 0.5rem 1.2rem;
+   .payment--btn {
+  /*  font-size: 0.8rem;
+    padding: 0.6rem 1.2rem 0.5rem 1.2rem;*/
     transform: translate(7.6rem, -23rem);
-  }
+  } 
 
   .section--footer-1 {
     min-height: calc(45vh+20vh);
@@ -7777,8 +7807,8 @@ visibility: hidden;
   }
 
   .payment--btn {
-    font-size: 0.8rem;
-    padding: 0.6rem 1.2rem 0.5rem 1.2rem;
+    /* font-size: 0.8rem;
+    padding: 0.6rem 1.2rem 0.5rem 1.2rem; */
     transform: translate(7.6rem, -24rem);
   }
 
@@ -7795,12 +7825,12 @@ visibility: hidden;
     font-size: 1em;
   }
 
-  .lord-icons-4 {
+  /* .lord-icons-4 {
     width: 18px !important;
     height: 18px !important;
     padding-right: 6px !important;
     padding-bottom: 4px !important;
-  }
+  } */
 }
 
 @media only screen and (max-width: 424px) {
@@ -7898,32 +7928,32 @@ visibility: hidden;
 
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 1.4rem;
     /* padding-bottom: 30px !important; */
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 0.8rem;
-    transform: translate(3rem, -1.8rem);
+    /* transform: translate(3rem, -1.8rem); */
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 0.8rem;
-    transform: translate(5rem, -2.2rem);
+    /* transform: translate(5rem, -2.2rem); */
   }
 
   .deliver--text>button {
-    margin-top: 0.2rem;
+    margin-top: 1rem;
     font-size: 0.8rem;
     padding: 0.5rem 1.7rem 0.5rem 1.7rem;
 
-    transform: translateY(-13px);
+    /* transform: translateY(-13px); */
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 80px !important;
     height: 80px !important;
     transform: translateY(10px);
@@ -8006,13 +8036,13 @@ visibility: hidden;
   }
 
   .payment--btn {
-    font-size: 0.8rem;
-    padding: 0.6rem 1.1rem 0.5rem 1.1rem;
+    /* font-size: 0.8rem; */
+    /* padding: 0.6rem 1.1rexm 0.5rem 1.1rem; */
     transform: translate(6.96rem, -23rem);
   }
 
   .extended--div {
-    transform: translateX(-3.5rem) !important;
+    transform: translateX(-2.4rem) !important;
   }
 
   .extended--div-2 {
@@ -8346,32 +8376,32 @@ visibility: hidden;
 
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 1.3rem;
     /* padding-bottom: 30px !important; */
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 0.7rem;
-    transform: translate(3rem, -1.8rem);
+    /* transform: translate(3rem, -1.8rem); */
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 0.7rem;
-    transform: translate(5rem, -2.2rem);
+    /* transform: translate(5rem, -2.2rem); */
   }
 
   .deliver--text>button {
-    margin-top: 0.2rem;
+    margin-top: 1rem;
     font-size: 0.8rem;
     padding: 0.5rem 1.7rem 0.5rem 1.7rem;
 
-    transform: translateY(-13px);
+    /* transform: translateY(-13px); */
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 80px !important;
     height: 80px !important;
     transform: translateY(10px);
@@ -8426,7 +8456,7 @@ visibility: hidden;
   }
 
   .extended--div {
-    transform: translateX(-2.8rem) !important;
+    transform: translateX(-1.8rem) !important;
   }
 
   .inr--extended--div-2 {
@@ -8434,15 +8464,15 @@ visibility: hidden;
   }
 
   .payment--btn {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem 1.5rem 0.8rem;
     transform: translate(7.05rem, -23rem);
   }
 
   .lord-icons-4 {
-    width: 18px !important;
-    height: 18px !important;
-  }
+    width: 12px !important;
+    height: 12px !important;
+}
 
   .cart-div {
     width: 60%;
@@ -8534,32 +8564,32 @@ visibility: hidden;
 
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 1.2rem;
     /* padding-bottom: 30px !important; */
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 0.6rem;
-    transform: translate(3rem, -1.3rem);
+    /* transform: translate(3rem, -1.3rem); */
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 0.6rem;
-    transform: translate(5rem, -1.7rem);
+    /* transform: translate(5rem, -1.7rem); */
   }
 
   .deliver--text>button {
-    margin-top: 0.2rem;
+    margin-top: 1rem;
     font-size: 0.65rem;
     padding: 0.4rem 1.5rem 0.4rem 1.5rem;
 
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 60px !important;
     height: 60px !important;
     transform: translateY(10px);
@@ -8998,8 +9028,8 @@ visibility: hidden;
   }
 
   .payment--btn {
-    font-size: 0.6rem;
-    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    /* font-size: 0.6rem;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem; */
     transform: translate(5.75rem, -23rem);
   }
 
@@ -9024,32 +9054,32 @@ visibility: hidden;
 
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 1rem;
     /* padding-bottom: 30px !important; */
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 0.55rem;
-    transform: translate(3rem, -1.3rem);
+    /* transform: translate(3rem, -1.3rem); */
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 0.55rem;
-    transform: translate(3.9rem, -1.7rem);
+    /* transform: translate(3.9rem, -1.7rem); */
   }
 
   .deliver--text>button {
-    margin-top: 0.2rem;
+    margin-top: 1rem;
     font-size: 0.55rem;
     padding: 0.35rem 1.3rem 0.35rem 1.3rem;
 
-    transform: translateY(-8px);
+    /* transform: translateY(-8px); */
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 60px !important;
     height: 60px !important;
     transform: translateY(10px);
@@ -9416,8 +9446,8 @@ visibility: hidden;
   }
 
   .payment--btn {
-    font-size: 0.5rem;
-    padding: 0.5rem 0.8rem 0.4rem 0.8rem;
+    /* font-size: 0.5rem;
+    padding: 0.5rem 0.8rem 0.4rem 0.8rem; */
     transform: translate(5.7rem, -23rem);
   }
 
@@ -9520,8 +9550,8 @@ visibility: hidden;
   }
 
   .payment--btn {
-    font-size: 0.5rem;
-    padding: 0.5rem 0.8rem 0.4rem 0.8rem;
+    /* font-size: 0.5rem;
+    padding: 0.5rem 0.8rem 0.4rem 0.8rem; */
     transform: translate(5.4rem, -23rem);
   }
 
@@ -9616,32 +9646,32 @@ visibility: hidden;
 
   }
 
-  .deliver--text>h1 {
+  .deliver--text>div>div>h1 {
     display: inline;
     font-size: 0.9rem;
     /* padding-bottom: 30px !important; */
   }
 
-  .deliver--text>h2 {
+  .deliver--text>div>div>h2 {
     font-size: 0.55rem;
-    transform: translate(3rem, -1rem);
+    /* transform: translate(3rem, -1rem); */
   }
 
-  .deliver--text>h3 {
+  .deliver--text>div>div>h3 {
     font-size: 0.55rem;
-    transform: translate(3.9rem, -1.5rem);
+    /* transform: translate(3.9rem, -1.5rem); */
   }
 
   .deliver--text>button {
-    margin-top: 0.2rem;
+    margin-top: 1rem;
     font-size: 0.55rem;
     padding: 0.35rem 1.3rem 0.35rem 1.3rem;
 
-    transform: translateY(-8px);
+    /* transform: translateY(-8px); */
 
   }
 
-  .deliver--text>lord-icon {
+  .deliver--text>div>lord-icon {
     width: 50px !important;
     height: 50px !important;
     transform: translateY(10px);
