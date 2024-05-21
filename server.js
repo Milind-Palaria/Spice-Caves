@@ -41,7 +41,7 @@ app.post("/api/login", async (req, res) => {
       },
       JWT_SECRET
     );
-    console.log("logged in");
+    // console.log("logged in");
     var uname = user.name;
     var uaddress = user.address;
     return res.json({ status: "ok", data: { token, uname, uaddress } });
@@ -93,9 +93,9 @@ app.post("/api/register", async (req, res) => {
       password,
     });
 
-    console.log("user created succesfuly");
+    // console.log("user created succesfuly");
   } catch (error) {
-    console.log(error)
+    // console.log(error)
     throw error;
   }
   //

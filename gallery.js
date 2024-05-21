@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
 const backToTopBtn = document.querySelector(".back-to-top--btn");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 400) {
-    console.log("mcolacm");
+    // console.log("mcolacm");
     // console.log("berks");
     backToTopBtn.setAttribute("data-visible", true);
   } else {

@@ -356,7 +356,7 @@ async function registerUser(event) {
   })
     .then((res) => {
       res = res.json();
-      console.log(res);
+      // console.log(res);
 
       return res;
     })
@@ -398,7 +398,7 @@ async function login(event) {
 
   if (result.status === "ok") {
     // everythign went fine
-    console.log("Got the token: ", result.data);
+    // console.log("Got the token: ", result.data);
     localStorage.setItem("token", result.data);
     const Lname = result.data.uname;
     // console.log(Lname);
@@ -2391,7 +2391,7 @@ closingBtn.addEventListener("click", () => {
   const appearing2 = extendedCartSection.getAttribute("data-visible");
   extendedCartSection.setAttribute("data-visible", false);
   cartSection.setAttribute("data-visible", true);
-  console.log(appearing2);
+  // console.log(appearing2);
 });
 ///////////////////////////////////////////////////
 var loader = document.getElementById("preloader");

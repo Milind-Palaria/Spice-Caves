@@ -26,7 +26,7 @@ async function fetchAPI() {
   const response = await fetch(baseURL);
   const data = await response.json();
   generateHTML(data.hits);
-  console.log(data);
+  // console.log(data);
 }
 
 function generateHTML(results) {
@@ -58,7 +58,7 @@ function generateHTML(results) {
 const backToTopBtn = document.querySelector(".back-to-top--btn");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 400) {
-    console.log("berks");
+    // console.log("berks");
     backToTopBtn.setAttribute("data-visible", true);
   } else {
     // console.log("still berks");
@@ -82,7 +82,7 @@ const closeNav = document.getElementById("nav--closer");
 
 
 hamImg.addEventListener('click', () => {
-  console.log('hello');
+  // console.log('hello');
   // navOverlay.setAttribute("data-visible", true);
   
   navOverlay.classList.remove("hdn");
