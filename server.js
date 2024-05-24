@@ -107,6 +107,6 @@ app.post("/api/register", async (req, res) => {
   res.json({ status: "ok", data: { name, address } });
   // console.log(await bcrypt.hash(pass,10))
 });
-app.listen(8000, () => {
+app.listen(3000, () => {
   console.log("server up");
 });
