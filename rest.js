@@ -1,4 +1,6 @@
-///////////////////////////////////////
+// const dotenv = require("dotenv");
+// dotenv.config();
+//////////////////////////////////////
 // Slider
 // const slider = function () {
 //   const slides = document.querySelectorAll(".slide");
@@ -322,61 +324,62 @@ const okayNotRegisternBtn = document.querySelector(".register-not-okay");
 const inlogs = document.querySelector(".inlogs");
 const avatarName = document.getElementById("avatar-name");
 const avatarAddy = document.getElementById("avatar-addy");
-// var loggedIn=false;
+var loggedIn=false;
 
-var loggedIn = true;
+// var loggedIn = true;
 
 
 /////////////////////////////////////////////////////////////////
 //FORM BACKEND
 /////////////////////////////////////////////////////////////////
 
-const Rform = document.getElementById("sign-form");
-Rform.addEventListener("submit", registerUser);
-async function registerUser(event) {
-  event.preventDefault();
-  var mail = document.getElementById("mail").value;
-  var name = document.getElementById("name").value;
-  var password = document.getElementById("password").value;
-  var address = document.getElementById("address").value;
-  var phone = document.getElementById("phone").value;
+// const Rform = document.getElementById("sign-form");
+// Rform.addEventListener("submit", registerUser);
+// async function registerUser(event) {
+//   event.preventDefault();
+//   var mail = document.getElementById("mail").value;
+//   var name = document.getElementById("name").value;
+//   var password = document.getElementById("password").value;
+//   var address = document.getElementById("address").value;
+//   var phone = document.getElementById("phone").value;
 
-  var result = await fetch("/api/register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/JSON",
-    },
-    body: JSON.stringify({
-      mail,
-      name,
-      phone,
-      address,
-      password,
-    }),
-  })
-    .then((res) => {
-      res = res.json();
-      // console.log(res);
+//   var result = await fetch("/api/register", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/JSON",
+//     },
+//     body: JSON.stringify({
+//       mail,
+//       name,
+//       phone,
+//       address,
+//       password,
+//     }),
+//   })
+//     .then((res) => {
+//       res =res.json({ message: "Registration successful" });
 
-      return res;
-    })
-    .then((data) => {
-      if (data.status === "ok") {
-        // everythign went fine
-        // alert("Success");
-        registerationSuccessed.classList.remove("hdne");
-        okayRegisterBtn.addEventListener("click", () =>
-          registerationSuccessed.classList.add("hdne")
-        );
-      } else {
-        // alert(result.error);
-        registerationFailed.classList.remove("hdne");
-        okayNotRegisternBtn.addEventListener("click", () =>
-          registerationFailed.classList.add("hdne")
-        );
-      }
-    });
-}
+//       // console.log(res);
+
+//       return res;
+//     })
+//     .then((data) => {
+//       if (data.status === "ok") {
+//         // everythign went fine
+//         // alert("Success");
+//         registerationSuccessed.classList.remove("hdne");
+//         okayRegisterBtn.addEventListener("click", () =>
+//           registerationSuccessed.classList.add("hdne")
+//         );
+//       } else {
+//         // alert(result.error);
+//         registerationFailed.classList.remove("hdne");
+//         okayNotRegisternBtn.addEventListener("click", () =>
+//           registerationFailed.classList.add("hdne")
+//         );
+//       }
+//     });
+// }
 const Lform = document.getElementById("log-form");
 Lform.addEventListener("submit", login);
 
@@ -385,7 +388,7 @@ async function login(event) {
   var mail = document.getElementById("login-mail").value;
   var password = document.getElementById("login-password").value;
 
-  var result = await fetch("/api/login", {
+  var result = await fetch(`${window.API_URL}/api/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -429,6 +432,50 @@ async function login(event) {
     okayNotLoginBtn.addEventListener("click", function () {
       loginFailed.classList.add("hdne");
     });
+  }
+}
+
+const Rform = document.getElementById("sign-form");
+Rform.addEventListener("submit", registerUser);
+
+async function registerUser(event) {
+  event.preventDefault();
+  var mail = document.getElementById("mail").value;
+  var name = document.getElementById("name").value;
+  var password = document.getElementById("password").value;
+  var address = document.getElementById("address").value;
+  var phone = document.getElementById("phone").value;
+// const API_URL = process.env.API_URL || "http://localhost:3000";
+  try {
+    const result = await fetch(`${window.API_URL}/api/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json", // Correct casing here
+      },
+      body: JSON.stringify({
+        mail,
+        name,
+        phone,
+        address,
+        password,
+      }),
+    });
+
+    const data = await result.json();
+
+    if (data.status === "ok") {
+      registerationSuccessed.classList.remove("hdne");
+      okayRegisterBtn.addEventListener("click", () =>
+        registerationSuccessed.classList.add("hdne")
+      );
+    } else {
+      registerationFailed.classList.remove("hdne");
+      okayNotRegisternBtn.addEventListener("click", () =>
+        registerationFailed.classList.add("hdne")
+      );
+    }
+  } catch (error) {
+    console.error("Error during registration:", error);
   }
 }
 

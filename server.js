@@ -1,3 +1,5 @@
+const dotenv = require("dotenv");
+dotenv.config();
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -5,22 +7,18 @@ const mongoose = require("mongoose");
 const User = require("./model/user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 
-const JWT_SECRET =
-  "jnckgvnriopadmcaievkaemlmvcak@**cjnkdkmvkvsivrmslvsnallanf";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 mongoose
-  .connect(
-    "mongodb+srv://Milind-Palaria:milind47%40iiitl@spice-caves-cluster.sjgydgj.mongodb.net/?retryWrites=true&w=majority&appName=Spice-Caves-Cluster",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+.connect(process.env.MONGO_URI)
   .then((w) => console.log("Database connected"));
 
-const app = express();
-app.use("/", express.static(path.join(__dirname, "./")));
+  
+  const app = express();
+  app.use(cors());
+  app.use("/", express.static(path.join(__dirname, "./")));
 app.use(bodyParser.json());
 
 app.post("/api/login", async (req, res) => {
@@ -52,39 +50,93 @@ app.post("/api/login", async (req, res) => {
 // app.post('/api/check', async (req, res) => {
 
 // })
+// app.post("/api/register", async (req, res) => {
+//   const { mail, name, phone, address, password: plainTextPassword } = req.body;
+//   var user = await User.findOne({ mail }).lean();
+
+//   if (user) {
+//     res.json({
+//       status: "error",
+//       error: "User with this e-mail already exists. Use another e-mail I.D.",
+//     });
+//     return;
+//   }
+//   const password = await bcrypt.hash(plainTextPassword, 10);
+//   if (phone.length < 10 || phone.length > 10) {
+//     res.json({
+//       status: "error",
+//       error: "Invalid Phone No.",
+//     });
+//     return;
+//   }
+//   if (!plainTextPassword || typeof plainTextPassword !== "string") {
+//     res.json({ status: "error", error: "Invalid password" });
+//     return;
+//   }
+
+//   if (plainTextPassword.length < 5) {
+//     res.json({
+//       status: "error",
+//       error: "Password too small. Should be atleast 6 characters",
+//     });
+//     return;
+//   }
+
+//   try {
+//     const response = await User.create({
+//       mail,
+//       name,
+//       phone,
+//       address,
+//       password,
+//     });
+
+//     // console.log("user created succesfuly");
+//   } catch (error) {
+//     // console.log(error)
+//     throw error;
+//   }
+//   //
+//   //
+//   // if (user.name != null) {
+//   //     var uname=user.name;
+//   //     var uaddress=user.address
+//   // }
+//   res.json({ status: "ok", data: { name, address } });
+//   // console.log(await bcrypt.hash(pass,10))
+// });
+
 app.post("/api/register", async (req, res) => {
   const { mail, name, phone, address, password: plainTextPassword } = req.body;
-  var user = await User.findOne({ mail }).lean();
-
-  if (user) {
-    res.json({
-      status: "error",
-      error: "User with this e-mail already exists. Use another e-mail I.D.",
-    });
-    return;
-  }
-  const password = await bcrypt.hash(plainTextPassword, 10);
-  if (phone.length < 10 || phone.length > 10) {
-    res.json({
-      status: "error",
-      error: "Invalid Phone No.",
-    });
-    return;
-  }
-  if (!plainTextPassword || typeof plainTextPassword !== "string") {
-    res.json({ status: "error", error: "Invalid password" });
-    return;
-  }
-
-  if (plainTextPassword.length < 5) {
-    res.json({
-      status: "error",
-      error: "Password too small. Should be atleast 6 characters",
-    });
-    return;
-  }
-
+  
   try {
+    // Check if user exists
+    const userExists = await User.findOne({ mail }).lean();
+    if (userExists) {
+      return res.json({
+        status: "error",
+        error: "User with this e-mail already exists. Use another e-mail I.D.",
+      });
+    }
+    
+    // Validate phone length
+    if (phone.length !== 10) {
+      return res.json({
+        status: "error",
+        error: "Invalid Phone No.",
+      });
+    }
+
+    // Validate password
+    if (!plainTextPassword || typeof plainTextPassword !== "string" || plainTextPassword.length < 5) {
+      return res.json({
+        status: "error",
+        error: "Password too small. Should be at least 6 characters",
+      });
+    }
+
+    // Hash password and create user
+    const password = await bcrypt.hash(plainTextPassword, 10);
     const response = await User.create({
       mail,
       name,
@@ -93,19 +145,11 @@ app.post("/api/register", async (req, res) => {
       password,
     });
 
-    // console.log("user created succesfuly");
+    return res.json({ status: "ok", data: { name, address } });
   } catch (error) {
-    // console.log(error)
-    throw error;
+    console.error("Error during user creation:", error);
+    return res.json({ status: "error", error: "Server error" });
   }
-  //
-  //
-  // if (user.name != null) {
-  //     var uname=user.name;
-  //     var uaddress=user.address
-  // }
-  res.json({ status: "ok", data: { name, address } });
-  // console.log(await bcrypt.hash(pass,10))
 });
 app.listen(3000, () => {
   console.log("server up");
