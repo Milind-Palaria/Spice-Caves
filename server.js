@@ -10,10 +10,17 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 
 const JWT_SECRET = process.env.JWT_SECRET;
+console.log("MongoDB URI:", process.env.MONGO_URI);
 
 mongoose
-.connect(process.env.MONGO_URI)
-  .then((w) => console.log("Database connected"));
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Database connected"))
+  .catch((error) => {
+    console.error("Database connection error:", error);
+  });
 
   
   const app = express();
@@ -47,64 +54,6 @@ app.post("/api/login", async (req, res) => {
 
   res.json({ status: "error", error: "Invalid e-mail/password" });
 });
-// app.post('/api/check', async (req, res) => {
-
-// })
-// app.post("/api/register", async (req, res) => {
-//   const { mail, name, phone, address, password: plainTextPassword } = req.body;
-//   var user = await User.findOne({ mail }).lean();
-
-//   if (user) {
-//     res.json({
-//       status: "error",
-//       error: "User with this e-mail already exists. Use another e-mail I.D.",
-//     });
-//     return;
-//   }
-//   const password = await bcrypt.hash(plainTextPassword, 10);
-//   if (phone.length < 10 || phone.length > 10) {
-//     res.json({
-//       status: "error",
-//       error: "Invalid Phone No.",
-//     });
-//     return;
-//   }
-//   if (!plainTextPassword || typeof plainTextPassword !== "string") {
-//     res.json({ status: "error", error: "Invalid password" });
-//     return;
-//   }
-
-//   if (plainTextPassword.length < 5) {
-//     res.json({
-//       status: "error",
-//       error: "Password too small. Should be atleast 6 characters",
-//     });
-//     return;
-//   }
-
-//   try {
-//     const response = await User.create({
-//       mail,
-//       name,
-//       phone,
-//       address,
-//       password,
-//     });
-
-//     // console.log("user created succesfuly");
-//   } catch (error) {
-//     // console.log(error)
-//     throw error;
-//   }
-//   //
-//   //
-//   // if (user.name != null) {
-//   //     var uname=user.name;
-//   //     var uaddress=user.address
-//   // }
-//   res.json({ status: "ok", data: { name, address } });
-//   // console.log(await bcrypt.hash(pass,10))
-// });
 
 app.post("/api/register", async (req, res) => {
   const { mail, name, phone, address, password: plainTextPassword } = req.body;
@@ -151,6 +100,6 @@ app.post("/api/register", async (req, res) => {
     return res.json({ status: "error", error: "Server error" });
   }
 });
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("server up");
 });
